@@ -1,7 +1,5 @@
+from telethon import TelegramClient, events
 import os
-import re
-import csv
-from telethon import TelegramClient
 from dotenv import load_dotenv
 
 class RealTimeTelegramScraper:
@@ -36,3 +34,6 @@ class RealTimeTelegramScraper:
 
         print("Listening for new messages...")
         await self.client.run_until_disconnected()
+
+    def get_data(self):
+        return self.data
